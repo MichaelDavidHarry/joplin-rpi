@@ -6,4 +6,4 @@ sudo rm -rf output
 mkdir output
 chmod 777 output
 
-sudo docker build --tag build-joplin-arm7h . && sudo docker run --rm -v "$DIR/output:/home/builder/output" build-joplin-arm7h
+sudo docker build --tag build-joplin-arm7h . && sudo docker run -t --rm -v "$DIR/output:/home/builder/output" build-joplin-arm7h
