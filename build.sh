@@ -5,11 +5,27 @@ set -e
 git clone https://github.com/laurent22/joplin.git
 
 cd joplin
-git checkout v1.6.8
+git checkout v1.7.11
 
-# Build steps taken from https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=joplin&id=a3f942cecf06db5cbc0520467d4d6d4fcfb7db78
+# Build steps taken from https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=joplin&id=d6b77dbf1fc62216a3d887c7c105d5847f8f73d6
 
 sed -i '/"husky": ".*"/d' package.json
+
+mkdir npm_cache
+cd npm_cache
+
+cache="`pwd`"
+
+cd ..
+
+jq ".packages = [
+        \"packages/app-cli\", \"packages/app-desktop\",
+        \"packages/fork-htmlparser2\", \"packages/fork-sax\",
+        \"packages/lib\", \"packages/renderer\", \"packages/tools\",
+        \"packages/turndown\", \"packages/turndown-plugin-gfm\"
+        ] |
+      . += {\"npmClient\": \"npm\", \"npmClientArgs\": [\"--cache $cache\"]}" lerna.json > lerna_new.json
+mv lerna_new.json lerna.json
 
 export LANG=en_US.utf8
 
