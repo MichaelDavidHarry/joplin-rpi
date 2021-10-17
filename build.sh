@@ -5,7 +5,7 @@ set -e
 git clone https://github.com/laurent22/joplin.git
 
 cd joplin
-git checkout v2.4.9
+git checkout v2.4.12
 
 # Build steps taken from https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=joplin&id=d6b77dbf1fc62216a3d887c7c105d5847f8f73d6
 
