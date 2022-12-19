@@ -8,6 +8,7 @@ Uses a chroot to build a .deb package and AppImage.
 1. Install `debootstrap` if it is not already installed. (`sudo apt install debootstrap -y`).
 2. Navigate to either the joplin32 or joplin64 directory. joplin32 will build the armhf package, joplin64 will build the aarch64 package.
 3. Run `sudo ./install-chroot.sh`. This will create the chroot environment in a subfolder named chroot. This will probably take about 10 minutes.
+**Note: After the build is completed, the chroot will use about 9 to 11 GB of disk space.**
 4. Run `sudo ./enter-chroot.sh`. This will put your terminal into the chroot environment.
 5. Run `./build.sh`. This will pull the Joplin code from GitHub and perform the build. This will probably take 1-2 hours.
 **Note: The build of the web-clipper package will fail. This is expected on this platform.**
