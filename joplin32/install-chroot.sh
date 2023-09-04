@@ -3,7 +3,7 @@
 set -e
 
 sudo mkdir -p chroot
-sudo debootstrap --no-check-gpg --arch armhf bullseye chroot http://raspbian.raspberrypi.org/raspbian/
+sudo debootstrap --no-check-gpg --arch armhf bullseye chroot http://raspbian.mirror.constant.com/raspbian/
 
 sudo cp install-dependencies.sh ./chroot
 sudo cp build.sh ./chroot
