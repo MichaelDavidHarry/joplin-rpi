@@ -7,7 +7,7 @@ git clone https://github.com/laurent22/joplin.git
 cd joplin
 
 # Change this line to change the version being built.
-git checkout v2.13.13
+git checkout v2.13.14
 
 # Disable parallel cloning and set compression to minimum level to lessen memory demand
 echo 'cloneConcurrency: 1' >> .yarnrc.yml
