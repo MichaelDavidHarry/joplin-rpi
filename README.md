@@ -27,7 +27,7 @@ Uses a chroot to build a .deb package and AppImage.
 ## Notes
 This build only seems to work correctly on ARM. Building on x86 will create output .deb and AppImage files, but these will not run on an ARM device correctly (program launches, but no window ever appears).
 
-The build process has only been tested on a Raspberry Pi 4 (4 GB RAM) running 64-bit Raspberry Pi OS (2022-09-22).
-The .deb and AppImage packages have been tested on a Raspberry Pi 4 running 64-bit Raspberry Pi OS (2022-09-22) for the 64-bit (aarch64) package, and on a Raspberry Pi 2 running 32-bit Raspberry Pi OS (2022-09-22) for the 32-bit (armhf) package.
+The build process has only been tested on a Raspberry Pi 5 (8 GB RAM) running 64-bit Raspberry Pi OS (V8 kernel) (2024-07-30).
+The .deb and AppImage packages have been tested on a Raspberry Pi 4 running 32-bit Raspberry Pi OS (2024-07-30) for the 32-bit (armhf) package, and on a Raspberry Pi 5 running 64-bit Raspberry Pi OS (2024-07-30) (V8 kernel) for the 64-bit (aarch64) package.
 
 Please don't bother the original author of Joplin for issues related to this unofficial build.
