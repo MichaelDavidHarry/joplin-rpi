@@ -7,7 +7,7 @@ git clone https://github.com/laurent22/joplin.git
 cd joplin
 
 # Change this line to change the version being built.
-git checkout v3.1.20
+git checkout v3.1.24
 
 yarn install
 
